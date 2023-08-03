@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Factorization</title>
+    <!-- Link Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo_details">
+            <i class="bx bxl-audible icon"></i>
+            <div class="logo_name">Learner</div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <i class="bx bx-search"></i>
+                <input type="text" placeholder="Search...">
+                <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href="dashboard.html">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="lessons.html">
+                    <!--<i class="bx bx-user"></i>-->
+                    <i class='bx bx-book-open'></i>
+                    <span class="link_name">Lessons</span>
+                </a>
+                <span class="tooltip">Lessons</span>
+            </li>
+            <li>
+                <a href="http://localhost:5000/">
+                    <i class="bx bx-chat"></i>
+                    <span class="link_name">Chatroom</span>
+                </a>
+                <span class="tooltip">Chatroom</span>
+            </li>
+            <li>
+                <a href="howto.html">
+                    <!--<i class="bx bx-pie-chart-alt-2"></i>-->
+                    <i class='bx bx-spreadsheet'></i>
+                    <span class="link_name">How To</span>
+                </a>
+                <span class="tooltip">How To</span>
+            </li>
+            <li>
+                <a href="games.html">
+                    <!--<i class="bx bx-folder"></i>-->
+                    <i class='bx bx-joystick'></i>
+                    <span class="link_name">Games</span>
+                </a>
+                <span class="tooltip">Games</span>
+            </li>
+            <li>
+                <a href="practice.html">
+                    <!--<i class="bx bx-cog"></i>-->
+                    <i class='bx bx-timer'></i>
+                    <span class="link_name">Practice</span>
+                </a>
+                <span class="tooltip">Practice</span>
+            </li>
+            <li class="profile">
+                <div class="profile_details">
+                    <img src="profile.jpeg" alt="profile image">
+                    <div class="profile_content">
+                        <div class="name">User</div>
+                        <div class="designation">Student</div>
+                    </div>
+                </div>
+                <i class="bx bx-log-out" id="log_out"></i>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section bg-white">
+        <!-- <div class="text">Dashboard</div> -->
+        <div class="mx-5 p-5 flex justify-center items-center bg-transparent">
+            <iframe width="750" height="422" src="https://www.youtube.com/embed/ctqviXu-mTE"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen class="border-8 border-white rounded-md shadow-lg"></iframe>
+        </div>
+        <div class="px-5 mx-auto text-2xl my-2">Comments</div>
+        <div class="h-1 bg-gray-200 rounded overflow-hidden mx-5">
+            <div class="w-24 h-full bg-indigo-500"></div>
+        </div>
+        <div id="disqus_thread" class="mx-auto my-10 w-9/12"></div>
+        <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://comments-disqus-com.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+                Disqus.</a></noscript>
+
+    </section>
+    <!-- Scripts -->
+    <script src="script.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-analytics.js";
+        import { getPerformance } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-performance.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCkzpxtm6YJmzVA3zYXul9aFUegMam840o",
+            authDomain: "signup-form-bee2b.firebaseapp.com",
+            projectId: "signup-form-bee2b",
+            storageBucket: "signup-form-bee2b.appspot.com",
+            messagingSenderId: "706891648333",
+            appId: "1:706891648333:web:cd5832304c5471bf2d7b04"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        const analytics = getAnalytics(app);
+        const perf = getPerformance(app);
+
+        console.log(app);
+
+        //----- Logout code start	  
+        document.getElementById("log_out").addEventListener("click", function () {
+            signOut(auth).then(() => {
+                // Sign-out successful.
+                console.log('Sign-out successful.');
+                alert('Sign-out successful.');
+                window.location.assign("index.html")
+            }).catch((error) => {
+                // An error happened.
+                console.log('An error happened.');
+            });
+        });
+
+    //----- End
+    </script>
+</body>
+
+</html>

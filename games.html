@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Games</title>
+    <!-- Link Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo_details">
+            <i class="bx bxl-audible icon"></i>
+            <div class="logo_name">Learner</div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <i class="bx bx-search"></i>
+                <input type="text" placeholder="Search...">
+                <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href="dashboard.html">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="lessons.html">
+                    <!--<i class="bx bx-user"></i>-->
+                    <i class='bx bx-book-open'></i>
+                    <span class="link_name">Lessons</span>
+                </a>
+                <span class="tooltip">Lessons</span>
+            </li>
+            <li>
+                <a href="http://localhost:5000/">
+                    <i class="bx bx-chat"></i>
+                    <span class="link_name">Chatroom</span>
+                </a>
+                <span class="tooltip">Chatroom</span>
+            </li>
+            <li>
+                <a href="howto.html">
+                    <!--<i class="bx bx-pie-chart-alt-2"></i>-->
+                    <i class='bx bx-spreadsheet'></i>
+                    <span class="link_name">How To</span>
+                </a>
+                <span class="tooltip">How To</span>
+            </li>
+            <li>
+                <a href="games.html">
+                    <!--<i class="bx bx-folder"></i>-->
+                    <i class='bx bx-joystick'></i>
+                    <span class="link_name">Games</span>
+                </a>
+                <span class="tooltip">Games</span>
+            </li>
+            <li>
+                <a href="practice.html">
+                    <!--<i class="bx bx-cog"></i>-->
+                    <i class='bx bx-timer'></i>
+                    <span class="link_name">Practice</span>
+                </a>
+                <span class="tooltip">Practice</span>
+            </li>
+            <li class="profile">
+                <div class="profile_details">
+                    <img src="profile.jpeg" alt="profile image">
+                    <div class="profile_content">
+                        <div class="name">User</div>
+                        <div class="designation">Student</div>
+                    </div>
+                </div>
+                <i class="bx bx-log-out" id="log_out"></i>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section bg-white">
+        <div class="px-5 mx-auto text-2xl text-center my-2">Games</div>
+        <div class="h-1 bg-gray-200 rounded overflow-hidden mx-5">
+            <div class="w-24 h-full bg-indigo-500"></div>
+        </div>
+        <section class="text-gray-600 body-font">
+            <div class="container px-5 py-12 mx-auto">
+                <div
+                    class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+                    <div
+                        class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="sm:w-16 sm:h-16 w-10 h-10">
+                            <path
+                                d="M19 3H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM5 19V5h14l.002 14H5z">
+                            </path>
+                            <circle cx="8" cy="8" r="1.5"></circle>
+                            <circle cx="12" cy="12" r="1.5"></circle>
+                            <circle cx="16" cy="16" r="1.5"></circle>
+                            <circle cx="8" cy="16" r="1.5"></circle>
+                            <circle cx="16" cy="8" r="1.5"></circle>
+                        </svg>
+                    </div>
+                    <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-2">What's the MATTER</h2>
+                        <p class="leading-relaxed text-base">Find out how much you really know about matter</p>
+                        <a class="mt-3 text-indigo-500 inline-flex items-center" href="mattergame.html">Play</a>
+                    </div>
+                </div>
+                <div
+                    class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+                    <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-2">All About Digestive</h2>
+                        <p class="leading-relaxed text-base">Learn more about your digestive system with this fun game</p>
+                        <a class="mt-3 text-indigo-500 inline-flex items-center" href="digestivegame.html">Play
+                            
+                        </a>
+                    </div>
+                    <div
+                        class="sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="sm:w-16 sm:h-16 w-10 h-10">
+                            <path
+                                d="M22 8.65A5 5 0 0 0 17 4H7a5 5 0 0 0-5 4.74A2 2 0 0 0 2 9v7.5A3.48 3.48 0 0 0 5.5 20c1.43 0 2.32-1.06 3.19-2.09.32-.37.65-.76 1-1.1a4.81 4.81 0 0 1 1.54-.75 6.61 6.61 0 0 1 1.54 0 4.81 4.81 0 0 1 1.54.75c.35.34.68.73 1 1.1.87 1 1.76 2.09 3.19 2.09a3.48 3.48 0 0 0 3.5-3.5V9a2.09 2.09 0 0 0 0-.26zm-2 7.85a1.5 1.5 0 0 1-1.5 1.5c-.5 0-1-.64-1.66-1.38-.34-.39-.72-.85-1.15-1.26a6.68 6.68 0 0 0-2.46-1.25 6.93 6.93 0 0 0-2.46 0 6.68 6.68 0 0 0-2.46 1.25c-.43.41-.81.87-1.15 1.26C6.54 17.36 6 18 5.5 18A1.5 1.5 0 0 1 4 16.5V9a.77.77 0 0 0 0-.15A3 3 0 0 1 7 6h10a3 3 0 0 1 3 2.72v.12A.86.86 0 0 0 20 9z">
+                            </path>
+                            <circle cx="16" cy="12" r="1"></circle>
+                            <circle cx="18" cy="10" r="1"></circle>
+                            <circle cx="16" cy="8" r="1"></circle>
+                            <circle cx="14" cy="10" r="1"></circle>
+                            <circle cx="8" cy="10" r="2"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col">
+                    <div
+                        class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="sm:w-16 sm:h-16 w-10 h-10">
+                            <path
+                                d="M19 3H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM5 19V5h14l.002 14H5z">
+                            </path>
+                            <circle cx="8" cy="8" r="1.5"></circle>
+                            <circle cx="12" cy="12" r="1.5"></circle>
+                            <circle cx="16" cy="16" r="1.5"></circle>
+                            <circle cx="8" cy="16" r="1.5"></circle>
+                            <circle cx="16" cy="8" r="1.5"></circle>
+                        </svg>
+
+                    </div>
+                    <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Latitudes and Longitudes</h2>
+                        <p class="leading-relaxed text-base">Test your knowledge on Latitude and Longitudes</p>
+                        <a class="mt-3 text-indigo-500 inline-flex items-center" href="latgame.html">Play
+                            
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+
+    </section>
+    <!-- Scripts -->
+    <script src="script.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-analytics.js";
+        import { getPerformance } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-performance.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCkzpxtm6YJmzVA3zYXul9aFUegMam840o",
+            authDomain: "signup-form-bee2b.firebaseapp.com",
+            projectId: "signup-form-bee2b",
+            storageBucket: "signup-form-bee2b.appspot.com",
+            messagingSenderId: "706891648333",
+            appId: "1:706891648333:web:cd5832304c5471bf2d7b04"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        const analytics = getAnalytics(app);
+        const perf = getPerformance(app);
+
+        console.log(app);
+
+        //----- Logout code start	  
+        document.getElementById("log_out").addEventListener("click", function () {
+            signOut(auth).then(() => {
+                // Sign-out successful.
+                console.log('Sign-out successful.');
+                alert('Sign-out successful.');
+                window.location.assign("index.html")
+            }).catch((error) => {
+                // An error happened.
+                console.log('An error happened.');
+            });
+        });
+
+    //----- End
+    </script>
+</body>
+
+</html>
+
